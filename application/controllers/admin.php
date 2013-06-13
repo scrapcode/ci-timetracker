@@ -19,7 +19,7 @@ class Admin extends CI_Controller {
         if(isset($data_in) && is_array($data_in)) { $data = array_merge($data, $data_in); }
         if(isset($inside)) { $data['inside'] = 'true'; }
 
-        $this->view->load('admin_view', $data);
+        $this->load->view('admin_view', $data);
     }
 
     /* This is how you call index from within the app to prevent
