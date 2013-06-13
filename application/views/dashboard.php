@@ -10,7 +10,7 @@
     <li><a href="<?php echo base_url(); ?>index.php/timetrack/time_out/">Clock Out</a></li>
     <li><a href="<?php echo base_url(); ?>index.php/timetrack/history/">History</a></li>
 
-<?php if($this->session->userdata('id') == '1'): ?>
+<?php if(isset($is_admin) && $is_admin): ?>
 
     <!-- Administrator -->
     <li><a href="<?php echo base_url(); ?>index.php/admin/">Admin</a></li>
@@ -47,6 +47,7 @@
 -->
 </div>
 
+<!-- This section made solely for debugging. -->
 <div id="screen_debug" title="Debug">
     <?php
     foreach($this->session->all_userdata() as $key => $val) {

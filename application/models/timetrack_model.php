@@ -53,9 +53,10 @@ class Timetrack_model extends CI_Model {
         return array('error' => 'An error occured.');
     }
 
-    // Check if there is time-in entry for the user
-    // without a time-out associated.
-    // If there is, return the activity id.
+    /* Check if there is time-in entry for the user
+     * without a time-out associated.
+     * If there is, return the activity id.
+     */
     private function user_is_clocked_in() {
         $this->db->where('userid', $this->user['id']);
         $this->db->where('time_in !=', '');
@@ -73,7 +74,10 @@ class Timetrack_model extends CI_Model {
         }
     }
 
-    // Gets clock history
+    /* Gets the time_in / time_out history
+     * Returns as a multi-nested array.
+     * If there's an error, returns an array with the key 'error'
+     */
     public function history($amount = 10) {
         $this->db->where('userid', $this->user['id']);
         $this->db->order_by('id', 'desc');

@@ -6,14 +6,15 @@ class TimeTrack extends CI_Controller {
         $this->check_isvalidated();
     }
 
-    /*
-     * Index
+    /* Index
      */
     public function index($data_in = false, $inside_call = false)
     {
+        $this->load->model('admin_model');
         $data = array(
             'title'     => 'TimeTrack',
             'user'      => $this->session->all_userdata(),
+            'is_admin'  => $this->admin_model->is_admin(),
         );
         if($data_in) { $data = array_merge($data, $data_in); }
         if($inside_call) { $data = array_merge($data, array('inside' => true)); }
@@ -22,16 +23,26 @@ class TimeTrack extends CI_Controller {
         //$this->load->view('footer');
     }
 
+    /* Call the dashboard with this after first load,
+     * to set `inside` as true. Fixes header/footer
+     * conflicts with iUI...
+     */
     public function dashboard() {
         $this->index(false, true);
     }
 
+    /* history()
+     * Returns an array of clock history.
+     */
     public function history() {
         $this->load->model('timetrack_model');
         $data = array('history' => $this->timetrack_model->history());
         $this->load->view('history_view', $data);
     }
 
+    /* time_in()
+     * Clocks a user in.
+     */
     public function time_in()
     {
         $this->load->model('timetrack_model'); // Load the model
@@ -53,6 +64,9 @@ class TimeTrack extends CI_Controller {
         } 
     }
 
+    /* time_out()
+     * Clocks a user out.
+     */
     public function time_out() {
         $this->load->model('timetrack_model');
         $data = array(
