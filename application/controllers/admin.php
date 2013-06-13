@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
      */
     public function index($data_in = false, $inside = false) {
         $data = array();
-        if(isset($data_in)) { $data = array_merge($data, $data_in); }
+        if(isset($data_in) && is_array($data_in)) { $data = array_merge($data, $data_in); }
         if(isset($inside)) { $data['inside'] = 'true'; }
 
         $this->view->load('admin_view', $data);
