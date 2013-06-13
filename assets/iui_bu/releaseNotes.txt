@@ -1,0 +1,124 @@
+REL-0.4 2012-08-11
+ * Code cleaup around iui.busy flag - fix Issue #346 (http://code.google.com/p/iui/issues/detail?id=346)
+ * README.txt is now READE.md (markdown) for GitHub
+ * Update GAE version and scripts for demo site on Google App Engine
+
+REL-0.4-beta3 2012-05-10
+ * Adjust our release naming convention from 0.40 to 0.4
+ * Major fixes/improvements to AJAX form submission (Issue #48, Issue #67, Issue #72, Issue #77)
+ * Treat sms: and callto: as "native links" (Issue #319)
+ * Add "HD" icon and images from the 0.50 branch
+ * Text Alignment fixes in .panel (Issue #90)
+ * Call onsubmit() for forms using submit buttons (Issue #53)
+ * Gradient theme (defaultgrad) replaces PNG file for .panel background
+ * Fix alignment issues for radio, checkbox, and select (Issue #90)
+ * Correctly handle form inputs with names of "action" or "method" (Issue #94)
+ * Support standard form submit inputs input[type="submit"] everywhere (Issue #332)
+ * Tutorial examples from www.iui-js.org are now in the release (web-app/tutorials/getting-started/)
+ * Other formatting fixes, testing and documentation fixes, etc.
+
+REL-0.40-beta2 2012-01-26
+ * Use location.replace() and location.assign() rather than location.hash in updatePage
+ * Save originalPage and use it if location.hash becomes "" (Fix for Issue #322)
+ * HD theme (for retina display) in the sandbox (ext-sandbox/t/defaulthd)
+ * Fix Theme Switcher for Safari 5.1 (Issue #317)
+
+REL-0.40-beta1 2012-01-03
+ * Update console logging function and control it with iui.logging boolean property
+ * Bug fixes and improvements to iui.css
+ * Bug fixes and improvements to default theme
+ * Bug fixes and improvements to default gradients theme
+ * Bug fixes and improvements to Android theme
+ * Bug fixes and improvements to WebOS theme
+ * Fixes and improvements in some test HTML files
+ * Update copyright date to 2012
+ * First release since switch to Git revision control system
+
+REL-0.40-alpha1 2011-09-30
+ * Fix for Issue #301 -- <a> tag with no href and onclick
+ * Fix for Issue #303 -- viewport metatags should use commas not semicolons
+ * Fix for Issue #256 (Input field styling doesn't work in Safari 5+
+ * Fix ajax calls against file URLs (don't treat xhr.status of 0 as error)
+ * Have iui.css use 'landscape' class rather than custom orient='landscape' attribute
+
+REL-0.40-dev3 2011-09-03
+ * Improvements and bugfixes to extension events
+ * iui.getAllViews (still needs code for older browsers!!!)
+ * iui.busy flag to fix Issue #191
+ * Android and WebOS themes
+ * Commented iui.js using Peter Rust's toolkit
+ * New extensions in Sandbox
+   * Javascript Loader (jit-loader)
+   * Cache Manager
+   * TbBMod (Toolbar button modification)
+   * Reachability
+   * Google Analytics
+   * HTML 5 Video
+   * Fragment unloader extension
+   * CanVG extension
+ * License change to MIT License (was New BSD License)
+
+REL-0.40-dev2 2009-12-18
+ * Fix Issue #138 (orientation css not updating)
+ * Fix Issue #184 (hardcoded width of 320 in "orientation event fallback")
+ * Re-enable call to submitForm in onsubmit in showForm()
+    (rev d6abb099744e6ae7f1591e3208d3d54bb35c2a51)
+ * Merge all -moz-* properties back in to iui.css and theme css
+ * Fix Issue #124 (Panel height too short on webapp-capapble) and add a test for it
+ * Create placeholder for gradient version of default theme
+ * Add iui.goBack() and use it instead of history.back()
+ * Add iUI favicon.ico and  iui-favicon.png
+ * Added starting point/placeholder for QUnit Tests
+ * Numerous additions and improvements to Test pages
+ * Numerous improvements to Google App Engine website
+
+REL-0.40-dev1 2009-10-06
+
+ * Work in progress
+ * Add events to iui/iui.js
+ * Add iui-views extension
+ * Integrate masabi rail-tickets and iui_ext
+
+REL-0.30 2009-08-06
+
+* CSS transitions for slide animation (for backward compatibility disabled by default) (Issue 97)
+* Support javascript: URLs in links (Issue 134)
+* Support loading complete pages in "WebApp" mode using target="_webapp" (Issue 135)
+* Added Red Button .redButton CSS and border-image (Issue 46)
+* Allow outbound links to anchor tags (Issue 82)
+* If HTML page is loaded with anchor to a loaded page/fragment/view, scroll to it (Issue 107)
+* Fix problem with hash and URLs like http://[site]/[webapp]/page.php/pageName.htm (Issue 122)
+
+REL-0.20 2009-05-08
+
+* Use onorientationchange event for orientation with fallback to use of window.innerWidth. (Issue 84)
+* Change value of orient attribute on body element for portrait mode from profile to portrait. (Issue 85)
+* Add support for radio buttons and checkboxes (Issue 9)
+* Add support for textarea in forms (Issue 11)
+* Add support for static text in a panel using span tags (Issue 52)
+* Add isNativeUrl() function to let certain URLs (tel, Google Maps, etc) have default handling (Issue 63)
+
+REL-0.13 2007-11-04
+
+* Add Joe's examples directory to SVN
+* Add -webkit-box-sizing to CSS
+* Generate compressed CSS as part of Ant build
+* Changed releaseNotes.txt to reverse chronological order
+* See Google code issues: http://code.google.com/p/iui/issues/list?can=1&q=milestone:REL-0.13
+
+REL-0.12 2007-10-19
+
+* Google Code Release of v0.12
+
+v0.12 7/17/2007
+
+* Fix bug that caused back button to disappear
+
+v0.11 7/16/2007
+
+* Fixed bug where clicking a form background would make it disappear
+* Added support for <a type="cancel"> to cancel dialogs
+* Added leftButton class for placing toolbar buttons on the left
+* Added whiteButton and grayButton styles for large dialog buttons
+* Support axis="y" to animate pages in vertically
+
