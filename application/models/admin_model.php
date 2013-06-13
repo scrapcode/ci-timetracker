@@ -43,4 +43,4 @@ class Admin_model extends CI_Model {
     }
 }
 
-/* EOF models/admin_model.php
+/* EOF models/admin_model.php */
