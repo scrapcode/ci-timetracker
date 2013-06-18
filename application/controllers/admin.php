@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
      * The headers will continually load via AJAX calls in iUI.\
      */
     public function index($data_in = false, $inside = false) {
-        $data = array();
+        $data = array('title' => 'Admin');
         if(isset($data_in) && is_array($data_in)) { $data = array_merge($data, $data_in); }
         if(isset($inside)) { $data['inside'] = 'true'; }
 

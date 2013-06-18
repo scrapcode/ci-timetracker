@@ -13,7 +13,7 @@
 <?php if(isset($is_admin) && $is_admin): ?>
 
     <!-- Administrator -->
-    <li><a href="<?php echo base_url(); ?>index.php/admin/">Admin</a></li>
+    <li><a href="<?php echo base_url(); ?>index.php/admin/">Admin Area</a></li>
     <li><a href="#screen_debug">Debug</a></li>
 
 <?php endif; ?>
